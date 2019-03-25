@@ -51,7 +51,7 @@ public class EmployeeService extends GenericService<Employee, EmployeeRequestDTO
         Employee employee = findById(id);
 
         buildUpdateEmployee(employee, dto);
-        employeeRepository.insert(employee);
+        employeeRepository.save(employee);
 
         return employee;
     }

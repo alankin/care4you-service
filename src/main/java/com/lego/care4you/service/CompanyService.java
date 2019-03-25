@@ -46,7 +46,7 @@ public class CompanyService extends GenericService<Company, CompanyRequestDTO> {
     public Company update(String id, CompanyRequestDTO dto) {
         Company company = findById(id);
         buildUpdateCompany(company, dto);
-        company = companyRepository.insert(company);
+        company = companyRepository.save(company);
         return company;
     }
 

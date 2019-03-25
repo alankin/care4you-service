@@ -51,7 +51,7 @@ public class RuleService extends GenericService<Rule, RulesRequestDTO> {
     public Rule update(String id, RulesRequestDTO dto) {
         Rule rule = findById(id);
         buildUpdateRules(rule, dto);
-        ruleRepository.insert(rule);
+        ruleRepository.save(rule);
 
         return rule;
     }

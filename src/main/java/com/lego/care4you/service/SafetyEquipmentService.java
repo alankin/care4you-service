@@ -46,7 +46,7 @@ public class SafetyEquipmentService extends GenericService<SafetyEquipment, Safe
     public SafetyEquipment update(String id, SafetyEquipmentRequestDTO dto) {
         SafetyEquipment safetyEquipment = findById(id);
         buildUpdateSafetyEquipment(safetyEquipment, dto);
-        safetyEquipmentRepository.insert(safetyEquipment);
+        safetyEquipmentRepository.save(safetyEquipment);
         return safetyEquipment;
     }
 

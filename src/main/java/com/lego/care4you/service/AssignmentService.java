@@ -55,7 +55,7 @@ public class AssignmentService extends GenericService<Assignment, AssignmentRequ
     public Assignment update(String id, AssignmentRequestDTO dto) {
         Assignment assignment = findById(id);
         buildUpdateAssignment(assignment, dto);
-        assignment = assignmentRepository.insert(assignment);
+        assignment = assignmentRepository.save(assignment);
         return assignment;
     }
 

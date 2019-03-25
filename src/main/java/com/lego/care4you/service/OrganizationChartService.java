@@ -47,7 +47,7 @@ public class OrganizationChartService extends GenericService<OrganizationChart, 
     public OrganizationChart update(String id, OrganizationChartRequestDTO dto) {
         OrganizationChart organizationChart = findById(id);
         buildUpdateOrganizationChart(organizationChart, dto);
-        organizationChartRepository.insert(organizationChart);
+        organizationChartRepository.save(organizationChart);
         return organizationChart;
     }
 

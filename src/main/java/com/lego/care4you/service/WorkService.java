@@ -61,7 +61,7 @@ public class WorkService extends GenericService<Work, WorkRequestDTO> {
         Work work = findById(id);
 
         buildUpdateWork(work, dto);
-        workRepository.insert(work);
+        workRepository.save(work);
 
         return work;
     }

@@ -49,7 +49,7 @@ public class PositionService extends GenericService<Position, PositionRequestDTO
         Position position = findById(id);
         buildUpdatePosition(position, dto);
 
-        positionRepository.insert(position);
+        positionRepository.save(position);
         return position;
     }
 

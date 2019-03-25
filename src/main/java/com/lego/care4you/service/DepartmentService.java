@@ -51,7 +51,7 @@ public class DepartmentService extends GenericService<Department, DepartmentRequ
     public Department update(String id, DepartmentRequestDTO dto) {
         Department department = findById(id);
         buildUpdateDepartment(department, dto);
-        department = departmentRepository.insert(department);
+        department = departmentRepository.save(department);
         return department;
     }
 

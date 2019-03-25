@@ -57,7 +57,7 @@ public class ResponsibleService extends GenericService<Responsible, ResponsibleR
         Responsible Responsible = findById(id);
 
         buildUpdateResponsible(Responsible, dto);
-        responsibleRepository.insert(Responsible);
+        responsibleRepository.save(Responsible);
 
         return Responsible;
     }

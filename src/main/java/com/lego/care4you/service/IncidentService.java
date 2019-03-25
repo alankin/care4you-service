@@ -50,7 +50,7 @@ public class IncidentService extends GenericService<Incident, IncidentRequestDTO
     public Incident update(String id, IncidentRequestDTO dto) {
         Incident incident = findById(id);
         buildUpdateIncident(incident, dto);
-        incident = incidentRepository.insert(incident);
+        incident = incidentRepository.save(incident);
         return incident;
     }
 
