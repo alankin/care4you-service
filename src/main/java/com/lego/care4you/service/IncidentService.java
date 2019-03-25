@@ -69,7 +69,6 @@ public class IncidentService extends GenericService<Incident, IncidentRequestDTO
         incident.setName(dto.getName());
         incident.setDate(dto.getDate());
         incident.setDescription(dto.getDescription());
-        incident.setObservation(dto.getObservation());
         incident.setType(dto.getType());
         incident.setSeverity(dto.getSeverity());
 

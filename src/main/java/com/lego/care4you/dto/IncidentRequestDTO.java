@@ -17,7 +17,6 @@ public class IncidentRequestDTO {
     private Date date;
     private IncidentType type;
     private IncidentSeverity severity;
-    private String observation;
 
     private String employeeId;
 }
